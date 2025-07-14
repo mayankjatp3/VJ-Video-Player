@@ -25,69 +25,146 @@ html_content = """
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Welcome to VJ Disk</title>
+    <title>Warrior Units - Site and Bot is Live</title>
     <style>
-        body {
+        /* Basic reset */
+        * {
             margin: 0;
-            font-family: 'Arial', sans-serif;
-            background: linear-gradient(135deg, #ff7e5f, #feb47b);
-            color: #fff;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body, html {
+            height: 100%;
+            font-family: 'Courier New', Courier, monospace;
+            background: black;
+            color: white;
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 100vh;
-            text-align: center;
-            perspective: 1000px;
+            overflow: hidden;
         }
-        
+
+        /* Main content container */
         .container {
-            transform-style: preserve-3d;
-            animation: rotate 10s infinite linear;
+            text-align: center;
+            z-index: 1;
         }
 
-        @keyframes rotate {
-            from {
-                transform: rotateY(0deg);
+        /* Animating text appearance */
+        @keyframes glitch {
+            0% {
+                text-shadow: 2px 2px #00ff00, -2px -2px #00ff00;
             }
-            to {
-                transform: rotateY(360deg);
+            20% {
+                text-shadow: 2px -2px #ff00ff, -2px 2px #00ff00;
+            }
+            40% {
+                text-shadow: -2px 2px #00ff00, 2px -2px #ff00ff;
+            }
+            60% {
+                text-shadow: 2px 2px #ff00ff, -2px -2px #00ff00;
+            }
+            80% {
+                text-shadow: -2px -2px #ff00ff, 2px 2px #00ff00;
+            }
+            100% {
+                text-shadow: 2px 2px #00ff00, -2px -2px #00ff00;
             }
         }
 
-        h1 {
-            font-size: 4em;
-            text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+        /* Styling for the welcome text */
+        .team-spy {
+            font-size: 3rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 5px;
+            background: linear-gradient(90deg, #ff6a00, #ee0979, #8e44ad, #3498db, #f4d03f);
+            background-size: 300%;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-shadow: 0 0 20px rgba(255, 255, 255, 0.6);
+            animation: glitch 1.5s infinite;
         }
 
-        p {
-            font-size: 1.5em;
+        .bot-status {
+            margin-top: 15px;
+            font-size: 1.2rem;
+            font-weight: 600;
+            letter-spacing: 2px;
+            color: #00ffab;
+            text-shadow: 0 0 10px #00ffab, 0 0 20px #00ffab;
+        }
+
+        .actions {
             margin-top: 20px;
-            text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
         }
 
-        .button {
-            margin-top: 30px;
-            padding: 15px 30px;
-            font-size: 1.2em;
-            background-color: #4CAF50; /* Green */
-            border: none;
-            border-radius: 5px;
+        .btn {
+            display: inline-block;
+            padding: 12px 25px;
+            font-size: 1rem;
+            font-weight: 600;
             color: white;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
+            text-transform: uppercase;
+            text-decoration: none;
+            border-radius: 30px;
+            background: linear-gradient(90deg, #6a11cb, #2575fc);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
 
-        .button:hover {
-            background-color: #45a049; /* Darker green */
+        .btn:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+            background: linear-gradient(90deg, #2575fc, #6a11cb);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .team-spy {
+                font-size: 2.5rem;
+            }
+
+            .bot-status {
+                font-size: 1rem;
+            }
+
+            .btn {
+                padding: 10px 20px;
+                font-size: 0.9rem;
+            }
+        }
+
+        @media (min-width: 1200px) {
+            .team-spy {
+                font-size: 4rem;
+            }
         }
     </style>
 </head>
 <body>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1162417600616917"
+     crossorigin="anonymous"></script>
+<!-- Player Home 1 -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-1162417600616917"
+     data-ad-slot="6504990098"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+    <!-- Main Content -->
     <div class="container">
-        <h1>Welcome To VJ Disk!</h1>
-        <p>Your ultimate destination for streaming and sharing videos!</p>
-        <p>Explore a world of entertainment at your fingertips.</p>
-        <button class="button" onclick="alert('Explore Now!')">Get Started</button>
+        <div class="team-spy">Warrior Units Bots</div>
+        <div class="bot-status">⚡ Site And Bot is Live ⚡</div>
+
+        <div class="actions">
+            <a href="https://t.me/WarriorUnitsBots" class="btn">Join Us</a>
+            <a href="https://telegram.me/oo7jatji" class="btn">Contact Me</a>
+        </div>
     </div>
 </body>
 </html>
